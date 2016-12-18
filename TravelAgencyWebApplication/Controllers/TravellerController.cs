@@ -26,24 +26,65 @@ namespace TravelAgencyWebApplication.Controllers
         }
 
         // GET: api/Traveller/5
-        public string Get(int id)
+        [Route("api/Traveller/{id:int}")]
+        public object Get(int id)
         {
-            return "value";
+            Traveller trav = travellers.FirstOrDefault<Traveller>(
+                t => t.Id == id
+                );
+            if (trav == null)
+            {
+                return NotFound();
+            }
+            return Ok(trav);
+        }
+
+        //GET by name
+        [Route("api/Traveller/{name}")]
+        public object getTravellerByName(string name)
+        {
+            Traveller[] travellersFilterName = travellers.Where<Traveller>(
+                t => t.FirstName.Contains(name) ).ToArray<Traveller>();
+            //Si el campo está vacío puede dar un error
+            return travellersFilterName;
         }
 
         // POST: api/Traveller
-        public void Post([FromBody]string value)
+        public IEnumerable<Traveller> Post([FromBody]Traveller newTraveller)
         {
+            List<Traveller> travellersList = travellers.ToList<Traveller>();
+            newTraveller.Id = travellersList.Count;
+            travellersList.Add(newTraveller);
+            travellers = travellersList.ToArray<Traveller>();
+            return travellersList;
         }
 
         // PUT: api/Traveller/5
-        public void Put(int id, [FromBody]string value)
+        public IEnumerable<Traveller> Put(int id, [FromBody]Traveller newTraveller)
         {
+            List<Traveller> travellersList = travellers.ToList<Traveller>();
+            Traveller trav = travellers.FirstOrDefault<Traveller>(
+                t => t.Id == id
+                );
+            if (trav == null)
+                travellersList.Add(newTraveller);
+            else
+            {
+                newTraveller.Id = trav.Id;
+                travellersList.Remove(trav);
+                travellersList.Add(newTraveller);
+            }
+            
+            travellers = travellersList.ToArray<Traveller>();
+            return travellersList;
+
         }
 
         // DELETE: api/Traveller/5
-        public void Delete(int id)
+        public IEnumerable<Traveller> Delete(int id)
         {
+            travellers = travellers.Where<Traveller>(c => c.Id != id).ToArray<Traveller>();
+            return travellers;
         }
     }
 }

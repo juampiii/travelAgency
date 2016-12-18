@@ -13,7 +13,7 @@ namespace TravelAgencyWebApplication.Models
         public string Destination { get; set; }
         public DateTime ReturnTime { get; set; }
         public string Comments { get; set; }
-        public Double price { get; set; }
+        public Double Price { get; set; }
         /// <summary>
         /// Client ID
         /// </summary>
@@ -47,7 +47,7 @@ namespace TravelAgencyWebApplication.Models
             this.Destination = String.Empty;
             this.ReturnTime = new DateTime();
             this.Comments = String.Empty;
-            this.price = 0.0;
+            this.Price = 0.0;
         }
     }
 }

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <input type="text" id="TravellerId"/>
+    <button onclick="searchTravellerByID()">Search</button>
+    <button onclick="addTraveller()">Add Guy</button>
+    <button onclick="putTraveller()">Change Guy</button>
+    <button onclick="deleteTraveller()">Bye Guy</button>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON("api/Traveller", function (result) {
+                console.info(result);
+            });
+        });
+        function searchTravellerByID() {
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                url: "api/Traveller/" + $("#TravellerId").val(),
+                sucess: function (result) {
+                    console.info(result);
+                }
+            });
+        }
+        function addTraveller() {
+            var newTraveller = {
+                "Id" : "2",
+            "FirstName" : "Pepito",
+            "SurName" : "Grillo",
+            "UserName" : "pgrillo",
+            "Password" : "pgrillo",
+            "CardNumber" : "12341234456767",
+            "PhoneNumber" : "09898767854",
+            "Adress" : "Nueva Avenida 4",
+            "Points" : "30"
+            };
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "api/Traveller",
+                data: newTraveller,
+                sucess: function (result) {
+                    console.info(result);
+                }
+            });
+        }
+        function putTraveller() {
+            var newTraveller = {
+                "FirstName": "Pepe",
+                "SurName": "Grillo",
+                "UserName": "pgrillo",
+                "Password": "pgrillo",
+                "CardNumber": "12341234456767",
+                "PhoneNumber": "09898767854",
+                "Adress": "Nueva Avenida 4",
+                "Points": "40"
+            };
+            $.ajax({
+                type: "PUT",
+                dataType: "json",
+                url: "api/Traveller/2",
+                data: newTraveller,
+                sucess: function (result) {
+                    console.info(result);
+                }
+            });
+        }
+        function deleteTraveller() {
+            $.ajax({
+                type: "DELETE",
+                dataType: "json",
+                url: "api/Traveller/2",
+                sucess: function (result) {
+                    console.info(result);
+                }
+            });
+        }
+    </script>
+    <div id="result"></div>
+</body>
+</html>

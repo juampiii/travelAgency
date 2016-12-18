@@ -1,0 +1,13 @@
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\bin\Debug\TravelAgency.Infraestructure.exe.config
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\bin\Debug\TravelAgency.Infraestructure.exe
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\bin\Debug\TravelAgency.Infraestructure.pdb
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\bin\Debug\EntityFramework.dll
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\bin\Debug\EntityFramework.SqlServer.dll
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\bin\Debug\EntityFramework.xml
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\bin\Debug\EntityFramework.SqlServer.xml
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\obj\Debug\TravelAgency.Infraestructure.csprojResolveAssemblyReference.cache
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\obj\Debug\TravelAgency.Infraestructure.exe
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\obj\Debug\TravelAgency.Infraestructure.pdb
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\obj\Debug\TravelAgency.Infraestructure.Migrations.Initialization.resources
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\obj\Debug\TravelAgency.Infraestructure.csproj.GenerateResource.Cache
+d:\common\documentos\visual studio 2015\Projects\TravelAgencyWebApplication\TravelAgency.Infraestructure\obj\Debug\TravelAgency.Infraestructure.Migrations.InheritestrategychangesandSeed.resources
